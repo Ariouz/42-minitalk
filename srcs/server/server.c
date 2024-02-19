@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <vicalvez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:33:42 by vicalvez          #+#    #+#             */
-/*   Updated: 2024/02/19 12:15:34 by vicalvez         ###   ########.fr       */
+/*   Updated: 2024/02/20 00:06:16 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ void    parse_char(int val)
     //ft_printf("len %d\n", clen);
     if (ft_strlen(c) == 8)
     {
-        //ft_printf("\nc: %s\n", c);
-        //ft_printf("char: %c\n", ft_atoi_base(c, "01"));
+        // ft_printf("\nc: %s\n", c);
+        // ft_printf("char: %d\n", ft_atoi_base(c, "01"));
         ft_printf("%c", ft_atoi_base(c, "01"));
         free(c);
         c = ft_calloc(sizeof(char), 9);
