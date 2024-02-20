@@ -6,7 +6,7 @@
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:32:47 by vicalvez          #+#    #+#             */
-/*   Updated: 2024/02/20 17:38:10 by vicalvez         ###   ########.fr       */
+/*   Updated: 2024/02/20 17:45:18 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,16 @@ int	main(int argc, char **argv)
 
 	signal(SIGUSR1, handle_sig);
 	if (argc < 3)
-		return (0);
+	{
+		ft_printf("Error: You must provide a PID and a message to send.\n");
+		return (1);
+	}
 	pid = ft_atoi(argv[1]);
+	if (pid == 0)
+	{
+		ft_printf("Error: Invalid PID\n");
+		return (0);
+	}
 	i = 0;
 	while (argv[2][i])
 	{
