@@ -1,3 +1,4 @@
+.PHONY: all re clean fclean libft
 SERVER= server
 CLIENT= client
 
@@ -14,15 +15,13 @@ FLAGS= -Wall -Werror -Wextra
 LFT_DIR= libs/libft
 LFT_A= $(LFT_DIR)/libft.a
 
-$(SERVER): libft $(SERVER_OBJS)
+$(SERVER): $(LFT_A) $(SERVER_OBJS)
 	gcc -g $(FLAGS) $(SERVER_OBJS) $(LFT_A) -o $(SERVER)
 
-$(CLIENT): libft $(CLIENT_OBJS)
+$(CLIENT): $(LFT_A) $(CLIENT_OBJS)
 	gcc -g $(FLAGS) $(CLIENT_OBJS) $(LFT_A) -o $(CLIENT)
 
-all:
-	make $(SERVER)
-	make $(CLIENT)
+all: $(SERVER) $(CLIENT)
 
 clean:
 	make -C $(LFT_DIR) clean BONUS=1
@@ -40,7 +39,5 @@ re:
 %.o: %.c
 	gcc -c $< -o $@ $(FLAGS) -I.
 
-libft:
+$(LFT_A):
 	make -C $(LFT_DIR) BONUS=1
-
-.PHONY: all re clean fclean libft

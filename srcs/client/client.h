@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <vicalvez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:32:57 by vicalvez          #+#    #+#             */
-/*   Updated: 2024/02/19 11:14:43 by vicalvez         ###   ########.fr       */
+/*   Updated: 2024/02/20 17:29:43 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,5 @@
 # include <signal.h>
 # include <errno.h>
 # include <string.h>
-
 
 #endif
